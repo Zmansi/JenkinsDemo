@@ -4,19 +4,19 @@ pipeline {
     stages {
        stage('NPM Setup') {
           steps {
-            'npm install'
+            npm install
          }
        }
 
 stage('Adding Android Platform') {
     steps {
-        'ionic cordova platform add android'
+        ionic cordova platform add android
         }
     }
       
        stage('Android Build') {
           steps {
-               'ionic cordova build android'
+               ionic cordova build android
                
           }
        }
