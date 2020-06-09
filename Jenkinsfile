@@ -1,23 +1,36 @@
 pipeline {
-   agent any
-   stages {
-      stage('NPM Setup') {
-      steps {
-         sh 'npm install'
-      }
-   }
+    agent any
+ 
+    stages {
+       stage('NPM Setup') {
+          steps {
+             scripts{
+            npm install
+             }
+             }
+       }
+        
+stage('Adding Android Platform') {
+    steps {
+       scripts{
+          ionic cordova platform add android
+       }
+        }
+    }
+      
+       stage('Android Build') {
+          steps {
+                      scripts{
+               ionic cordova build android
+                      }               
+          }
+       }
 
-   stage('IOS Build') {
-   steps {
-      sh 'ionic cordova build ios'
-     } 
-  }
+        stage('Publish Android') {
+          steps {
+              echo "Publish Android"
+          }
+       }
 
-   stage('Android Build') {
-   steps {
-      sh 'ionic cordova build android'
-   }
-  }
-
- }
+}
 }
