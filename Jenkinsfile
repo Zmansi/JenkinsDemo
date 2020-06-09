@@ -10,7 +10,7 @@ pipeline {
         
 stage('Adding Android Platform') {
     steps {
-        'ionic cordova platform add android'
+       sh 'ionic cordova platform add android'
         }
     }
       
