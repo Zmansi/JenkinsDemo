@@ -1,7 +1,8 @@
 pipeline {
     agent any
 environment {
-PATH='/usr/local/bin:/usr/bin:/bin'
+JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk-amd64'
+PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/local/bin:/usr/bin:/bin'
 }
     stages {
        stage('NPM Setup') {
