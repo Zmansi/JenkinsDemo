@@ -19,8 +19,7 @@ stage('Adding Android Platform') {
       
        stage('Android Build') {
           steps {
-              sh 'ionic cordova build android --confirm
-               
+              sh 'ionic cordova build android --confirm'               
           }
        }
 
