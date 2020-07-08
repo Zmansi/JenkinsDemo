@@ -13,13 +13,13 @@ PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/local/bin:/usr/bin:/bin'
         
 stage('Adding Android Platform') {
     steps {
-       sh 'ionic cordova platform add android'
+       sh 'ionic cordova platform add android --confirm'
         }
     }
       
        stage('Android Build') {
           steps {
-              sh 'ionic cordova build android'
+              sh 'ionic cordova build android --confirm
                
           }
        }
