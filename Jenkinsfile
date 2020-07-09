@@ -2,7 +2,10 @@ pipeline {
     agent any
 environment {
 JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk-amd64'
-PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/local/bin:/usr/bin:/bin'
+ANDROID_SDK_ROOT='/home/mansi/Android/Sdk'
+ANDROID_HOME='/home/mansi/Android/Sdk'
+PATH='/opt/gradle/gradle-3.4.1/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/local/bin:/usr/bin:/bin'
+
 }
     stages {
        stage('NPM Setup') {
